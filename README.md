@@ -10,7 +10,6 @@
 - Laravel 8
 - Laravel Octane
 - MySQL 8
-- phpMyAdmin
 
 ## Быстрый старт
 
@@ -21,8 +20,7 @@ cd api-importer
 docker-compose up --build -d
 ```
 
-### 2. Настройка .env
-В папке src скопируйте .env.example в .env и укажите параметры подключения к БД и API:
+### 2. Настройка 
 
 ```
 DB_HOST=zobnyynmysql-ordelicsgo-ab3f.c.aivencloud.com
