@@ -25,32 +25,16 @@ docker-compose up --build -d
 В папке src скопируйте .env.example в .env и укажите параметры подключения к БД и API:
 
 ```
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=api_importer
-DB_USERNAME=root
-DB_PASSWORD=secret
-```
+DB_HOST=zobnyynmysql-ordelicsgo-ab3f.c.aivencloud.com
+DB_PORT=22768
+DB_DATABASE=defaultdb
+DB_USERNAME=avnadmin
+DB_PASSWORD=AVNS_fX3mIqqXD-b7D1ku_MI
 
-### 3. Миграции
-```bash
-docker compose exec app php artisan migrate:fresh --force
 ```
-
-### 4. Импорт данных
-```bash
-docker compose exec app php artisan import:all --dateFrom=2025-07-01 --dateTo=2025-07-24
-```
-
 - Все эндпоинты API возвращают ответ в формате JSON с пагинацией (используются параметры page и limit).
 - Для stocks всегда берётся текущая дата.
 - Все ошибки и пропуски логируются в storage/logs/import_errors.log.
-
-### 5. Доступ к базе через phpMyAdmin
-- Откройте http://localhost:8080
-- Сервер: db
-- Пользователь: root
-- Пароль: secret
 
 ## Структура таблиц
 - sales
