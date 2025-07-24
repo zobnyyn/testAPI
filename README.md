@@ -16,7 +16,7 @@
 
 ### 1. Клонирование и запуск
 ```bash
-git clone <ваш-репозиторий>
+git clone [<testAPI>](https://github.com/zobnyyn/testAPI)
 cd api-importer
 docker-compose up --build -d
 ```
