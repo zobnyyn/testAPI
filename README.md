@@ -30,8 +30,6 @@ DB_PORT=3306
 DB_DATABASE=api_importer
 DB_USERNAME=root
 DB_PASSWORD=secret
-API_BASE_URL=http://109.73.206.144:6969
-API_KEY=E6kUTYrYwZq2tN4QEtyzsbEBk3ie
 ```
 
 ### 3. Миграции
@@ -60,14 +58,6 @@ docker compose exec app php artisan import:all --dateFrom=2025-07-01 --dateTo=20
 - stocks
 - incomes
 
-(См. миграции в src/database/migrations)
-
 ## Логирование ошибок
 Все ошибки импорта и пропущенные записи пишутся в storage/logs/import_errors.log.
 
-## Развёртывание БД на бесплатном хостинге
-- Можно использовать db4free.net, freemysqlhosting.net и т.п.
-- После развёртывания укажите доступы и названия таблиц.
-
-## Контакты
-Если возникнут вопросы — пишите!
